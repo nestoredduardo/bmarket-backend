@@ -1,7 +1,7 @@
 const products = require('../components/products/network');
 
 const routes = (server) => {
-  server.routes('/product', products);
+  server.use('/product', products);
 };
 
 module.exports = routes;
