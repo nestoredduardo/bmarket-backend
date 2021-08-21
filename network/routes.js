@@ -1,6 +1,6 @@
 const products = require('../components/products/network');
 const categories = require('../components/categories/network');
-const search = require('../components/products/network');
+const search = require('../components/search/network');
 
 const routes = (server) => {
   server.use('/products', products);
