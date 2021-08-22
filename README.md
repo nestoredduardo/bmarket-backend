@@ -109,3 +109,77 @@ GET https://bmarket-api.herokuapp.com/products?page=1&category=3
 |------|--------|-------------------------------------|
 | id   | int    | Identificador único de la categoría |
 | name | string | Nombre de la categoría              |
+
+## Obtener categorías
+
+Puede acceder a la lista de todas las categorías.
+
+GET https://bmarket-api.herokuapp.com/categories
+
+```json
+
+  {
+    "error": "",
+    "body": {
+      "categories": [
+        {
+          "id": 1,
+          "name": "bebida energetica"
+        },
+        {
+          "id": 2,
+          "name": "pisco"
+        },
+        {
+          "id": 3,
+          "name": "ron"
+        },
+        {
+          "id": 4,
+          "name": "bebida"
+        },
+        {
+          "id": 5,
+          "name": "snack"
+        },
+        {
+          "id": 6,
+          "name": "cerveza"
+        },
+        {
+          "id": 7,
+          "name": "vodka"
+        }
+      ]
+    }
+  }
+
+```
+
+# Search
+
+## Realizar búsqueda
+
+Puede acceder a los resultados de su búsqueda. El parámetro input siempre debe tener un valor.
+
+GET https://bmarket-api.herokuapp.com/search/?input=ron
+
+```json
+
+{
+  "error": "",
+  "body": {
+    "products": [
+      {
+        "id": 23,
+        "name": "RON BACARDI AÑEJO",
+        "url_image": "https://dojiw2m9tvv09.cloudfront.net/11132/product/bacardi9450.jpg",
+        "price": 4990,
+        "discount": 0,
+        "category": 3
+      },
+      //...
+    ]
+  }
+}
+```
